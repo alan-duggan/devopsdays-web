@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 set -e
 
 cd `dirname ${0}`
@@ -18,7 +19,7 @@ SEDCMD(){
 }
 
 if [[ $(date +"%m") -ge 10 ]]; then
-  default_year=$(date -v +1y "+%Y")
+  default_year=$(echo $(echo `date +"%Y"` + 1) | bc)
 else
   default_year=$(date +"%Y")
 fi 
@@ -58,8 +59,8 @@ SEDCMD "s/yourlocation/$city/" $eventdatafile
 SEDCMD "s/yyyy-city/$event_slug/" $eventdatafile
 SEDCMD "s/devopsdayscityabbr/$twitter/" $eventdatafile
 
-# Name the email lists
-SEDCMD "s/city-year/$city_slug-$year/" $eventdatafile
+# Name the email list
+SEDCMD "s/city_email/$city_slug/" $eventdatafile
 
 # Seed initial files for event
 cp -r examples/content/events/yyyy-city ../content/events/$event_slug

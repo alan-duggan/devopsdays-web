@@ -28,7 +28,7 @@
             height: 100%;
             z-index: -1;
             opacity: 0.2;
-            background-image: url('{{ (printf "events/%s/%s" $e.name $e.masthead_background) | absURL}}');
+            background-image: url('{{ (printf "/events/%s/%s" $e.name $e.masthead_background) }}');
             background-repeat: no-repeat;
             background-position: 50% 0;
             -ms-background-size: cover;
@@ -67,7 +67,7 @@
         <br />
 
         {{- if $e.location -}}
-          <span class = "welecome-page-masthead-venue">{{- $e.location -}}</span>
+          <span class = "welcome-page-masthead-venue">{{- $e.location -}}</span>
           <br />
           {{- if $e.location_address -}}
             <span><a href = "http://maps.google.com/?q={{$e.location_address}}" class = "welcome-page-masthead-link">{{ $e.location_address }}</a></span>
@@ -92,7 +92,7 @@
                     {{- $.Scratch.Set "past-counter" 1 -}}
                   {{- end -}}
                   {{- if ne .startdate $e.startdate -}}
-                    <a href = "{{ (printf "events/%s" .name) | absURL }}" class="welcome-page-masthead-link">{{ dateFormat "2006" .startdate }}</a> &nbsp;&nbsp;
+                    <a href = "{{ (printf "/events/%s" .name) }}" class="welcome-page-masthead-link">{{ dateFormat "2006" .startdate }}</a> &nbsp;&nbsp;
                   {{- end -}}
               {{- end -}}
             {{- else -}}
@@ -103,7 +103,7 @@
                   {{- $.Scratch.Set "past-counter" 1 -}}
                 {{- end -}}
                 {{- if ne .startdate $e.startdate -}}
-                  <a href = "{{ (printf "events/%s" .name) | absURL }}" class="welcome-page-masthead-link">{{ dateFormat "2006" .startdate }}</a> &nbsp;&nbsp;
+                  <a href = "{{ (printf "/events/%s" .name) }}" class="welcome-page-masthead-link">{{ dateFormat "2006" .startdate }}</a> &nbsp;&nbsp;
                 {{- end -}}
               {{- end -}}
               {{- end -}}

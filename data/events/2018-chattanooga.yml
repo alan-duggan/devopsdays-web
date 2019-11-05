@@ -4,7 +4,6 @@ city: "Chattanooga" # The displayed city name of the event. Capitalize it.
 event_twitter: "ChaDevOpsDays" # Change this to the twitter handle for your event such as devopsdayschi or devopsdaysmsp
 description: "DevOpsDays is coming to Chattanooga, Tennessee!" # Edit this to suit your preferences
 ga_tracking_id: "UA-122945114-1"
-event_group: "Chattanooga"
 
 masthead_background: "chattanooga-masthead.jpg"
 
@@ -23,8 +22,8 @@ cfp_link: "https://www.papercall.io/devopsdayschattanooga" #if you have a custom
 registration_date_start: 2018-08-10T00:00:00-04:00 # start accepting registration. Leave blank if registration is not open yet
 registration_date_end: 2018-11-12T00:00:00-05:00 # close registration. Leave blank if registration is not open yet.
 
-registration_closed: "" #set this to true if you need to manually close registration before your registration end date
-registration_link: "https://chadevopsdays.ticketspice.com/devopsdays-chattanooga" # If you have a custom registration link, enter it here. This will control the Registration menu item as well as the "Register" button.
+registration_closed: false #set this to true if you need to manually close registration before your registration end date
+registration_link: "https://ti.to/chattanooga-devopsdays/chattanooga-devopsdays-2019" # If you have a custom registration link, enter it here. This will control the Registration menu item as well as the "Register" button.
 
 # Location
 #
@@ -83,15 +82,15 @@ sponsors:
     level: platinum
   - id: chef
     level: gold
-  - id: redhat
+  - id: redhat-before-20190528
     level: gold
   - id: infosystems
     level: gold
   - id: cloudbees
     level: gold
-  - id: sonatype
+  - id: sonatype-before-20190121
     level: gold
-  - id: appdynamics
+  - id: appdynamics-before-20190121
     level: gold
   - id: puppet
     level: gold
@@ -102,6 +101,10 @@ sponsors:
   - id: teksystems
     level: bronze
     twitter: teksystems
+  - id: reactiveops
+    level: bronze
+  - id: stratusgrid
+    level: bronze
   - id: crysdesigns
     level: community
 
@@ -122,6 +125,7 @@ sponsor_levels:
     max: 2
   - id: gold
     label: Gold
+    max: 7
   - id: silver
     label: Silver
   - id: bronze
@@ -210,6 +214,11 @@ program:
     date: 2018-11-13T00:00:00-05:00
     start_time: "14:35"
     end_time: "15:10"
+  - title: "Break"
+    type: custom
+    date: 2018-11-13T00:00:00-05:00
+    start_time: "15:10"
+    end_time: "15:25"
   - title: "chris-rimondi"
     type: talk
     date: 2018-11-13T00:00:00-05:00
